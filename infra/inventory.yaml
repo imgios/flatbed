@@ -1,0 +1,12 @@
+ungrouped:
+  hosts:
+    pi01:
+      ansible_host: 192.168.1.211
+    pi02:
+      ansible_host: 192.168.1.212
+controlplane:
+  hosts:
+    pi01: # It's right to have it unset
+workers:
+  hosts:
+    pi02: # It's right to have it unset
