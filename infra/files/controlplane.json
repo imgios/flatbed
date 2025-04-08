@@ -1,0 +1,23 @@
+{
+  "ignition": {
+    "version": "3.4.0"
+  },
+  "kernelArguments": {
+    "shouldExist": [
+      "console=ttyAMA0,115200n8",
+      "console=tty1",
+      "flatcar.autologin",
+      "usbcore.autosuspend=-1"
+    ]
+  }
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "sshAuthorizedKeys": [
+          "$HOST_PUBLIC_KEY"
+        ]
+      }
+    ]
+  }
+}
