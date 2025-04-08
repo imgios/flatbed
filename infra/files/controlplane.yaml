@@ -1,0 +1,12 @@
+variant: flatcar
+version: 1.1.0
+kernel_arguments:
+  should_exist:
+    - "console=ttyAMA0,115200n8"
+    - "console=tty1"
+    - "flatcar.autologin"
+    - "usbcore.autosuspend=-1"
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys: "$HOST_PUBLIC_KEY"
