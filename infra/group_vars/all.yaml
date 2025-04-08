@@ -1,0 +1,3 @@
+---
+ansible_user: core
+k3s_token: "experimental-hom3l4b"
