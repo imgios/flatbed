@@ -23,9 +23,6 @@ storage:
     - path: /etc/sysupdate.d/noop.conf
       contents:
         source: https://extensions.flatcar.org/extensions/noop.conf
-    - path: /etc/systemd/system/multi-user.target.wants/k3s.service
-      target: /usr/local/lib/systemd/system/k3s.service
-      overwrite: true
     - path: /etc/rancher/k3s/config.yaml
       contents:
         inline: |
@@ -36,6 +33,9 @@ storage:
     - target: /opt/extensions/k3s/k3s-v1.32.3+k3s1-arm64.raw
       path: /etc/extensions/k3s.raw
       hard: false
+    - path: /etc/systemd/system/multi-user.target.wants/k3s.service
+      target: /usr/local/lib/systemd/system/k3s.service
+      overwrite: true
     - path: /etc/extensions/docker-flatcar.raw
       target: /dev/null
       overwrite: true
