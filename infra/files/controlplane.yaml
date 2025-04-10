@@ -9,7 +9,8 @@ kernel_arguments:
 passwd:
   users:
     - name: core
-      ssh_authorized_keys: "$HOST_PUBLIC_KEY"
+      ssh_authorized_keys:
+        - "$HOST_PUBLIC_KEY"
 storage:
   files:
     - path: /opt/extensions/k3s/k3s-v1.32.3+k3s1-arm64.raw
